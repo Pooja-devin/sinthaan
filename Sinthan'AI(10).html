@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>𝐒𝐢𝐧𝐭𝐡𝐚𝐧'𝐀𝐈 𝟐𝐤𝟐𝟔⚡❗ Erode Sengunthar Engineering College</title>
+    <link rel="icon" href="sinthan logo.jpeg">
+   
+    <!-- CSS & Icon Libraries -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@400;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --neon-cyan: #00f2ff;
+            --neon-purple: #bc13fe;
+            --neon-pink: #ff00ff;
+            --cyber-yellow: #fef08a;
+            --neon-orange: #f97316;
+            --dark-bg: #050505;
+        }
+        body { background-color: var(--dark-bg); font-family: 'Inter', sans-serif; color: #f8fafc; scroll-behavior: smooth; }
+        h1, h2, h3, h4 { font-family: 'Space Grotesk', sans-serif; }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        .glow-cyan { text-shadow: 0 0 15px rgba(0, 242, 255, 0.6); }
+        
+        .cyber-grid {
+            background-image: 
+                linear-gradient(rgba(0, 242, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 242, 255, 0.05) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: grid-move 20s linear infinite;
+        }
+        @keyframes grid-move { from { background-position: 0 0; } to { background-position: 50px 50px; } }
+
+        .cyberpunk-title {
+            background: linear-gradient(to right, var(--neon-cyan), var(--neon-purple), var(--neon-pink), var(--neon-cyan));
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 5s linear infinite;
+            filter: drop-shadow(0 0 10px rgba(0, 242, 255, 0.5));
+        }
+
+        .text-prize-gradient {
+            background: linear-gradient(to right, var(--neon-cyan), var(--neon-purple), var(--cyber-yellow), var(--neon-cyan));
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 5s linear infinite;
+        }
+        
+        @keyframes shine { to { background-position: 200% center; } }
+
+        @keyframes pulse-glow {
+            0%, 100% { opacity: 0.4; filter: blur(15px); }
+            50% { opacity: 0.9; filter: blur(25px); }
+        }
+        .hero-badge-pulse { animation: pulse-glow 2s ease-in-out infinite; }
+
+        .glass-card {
+            background: rgba(15, 15, 18, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover { border-color: var(--neon-cyan); transform: translateY(-4px); }
+
+        /* Timeline Specific CSS */
+        .timeline-container { position: relative; max-width: 1000px; margin: 0 auto; }
+        .timeline-line {
+            position: absolute; left: 50%; top: 0; bottom: 0; width: 4px;
+            background: var(--neon-orange); transform: translateX(-50%);
+            box-shadow: 0 0 20px var(--neon-orange); z-index: 1;
+        }
+        .timeline-item { position: relative; width: 50%; padding: 20px 40px; }
+        .timeline-item::after {
+            content: ''; position: absolute; width: 16px; height: 16px; 
+            background: #000; border: 4px solid var(--neon-orange);
+            border-radius: 50%; top: 50%; transform: translateY(-50%); z-index: 2;
+        }
+        .left-item { left: 0; text-align: right; }
+        .right-item { left: 50%; text-align: left; }
+        .left-item::after { right: -8px; }
+        .right-item::after { left: -8px; }
+
+        @media screen and (max-width: 768px) {
+            .timeline-line { left: 30px; }
+            .timeline-item { width: 100%; left: 0; padding-left: 60px; padding-right: 20px; text-align: left; }
+            .timeline-item::after { left: 22px; }
+        }
+
+        #mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            background: #1e293b;
+        }
+        #mobile-menu.active { transform: translateX(0); }
+    </style>
+</head>
+<body class="overflow-x-hidden text-left">
+
+    <!-- Background Grid -->
+    <div class="fixed inset-0 z-0 cyber-grid"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-[#050505]/90 border-b border-cyan-500/20 backdrop-blur-xl">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                  <img 
+  src="images/sinthan logo1.jpeg" 
+  class="w-10 h-10 rounded-lg object-contain shadow-[0_0_15px_rgba(0,242,255,0.6)]">
+
+                <span class="text-xl md:text-2xl font-bold tracking-tighter uppercase glow-cyan">  𝐒𝐢𝐧𝐭𝐡𝐚𝐧'𝐀𝐈 <span class="text-cyan-400">𝟐𝐤𝟐𝟔⚡💥❗ </span> </span>
+            </div>
+            <button onclick="toggleMenu()" class="p-2 rounded-lg bg-[#1e293b] text-cyan-400 border border-cyan-500/30">
+                <i data-lucide="menu" id="menu-icon" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Sidebar Menu -->
+    <div id="mobile-menu" class="fixed inset-y-0 right-0 w-72 z-[100] border-l border-cyan-500/20 overflow-y-auto shadow-2xl">
+        <div class="flex flex-col pt-24 px-8 pb-12 space-y-8 text-left uppercase text-sm font-black">
+            <a href="#home" onclick="toggleMenu()" class="text-white hover:text-cyan-400 transition-colors tracking-widest">Home</a>
+            <a href="#agenda" onclick="toggleMenu()" class="text-white hover:text-cyan-400 transition-colors tracking-widest">Agenda</a>
+            <a href="#prizes" onclick="toggleMenu()" class="text-white hover:text-cyan-400 transition-colors tracking-widest">Grand Prizes</a>
+            <a href="#notes" onclick="toggleMenu()" class="text-white hover:text-cyan-400 transition-colors tracking-widest">Protocols</a>
+            <a href="#accommodation" onclick="toggleMenu()" class="text-white hover:text-cyan-400 transition-colors tracking-widest">Accommodation</a>
+            <a href="#register" onclick="toggleMenu()" class="text-cyan-400 hover:text-white transition-colors tracking-widest">Registration</a>
+            <a href="#contact" onclick="toggleMenu()" class="text-white hover:text-cyan-400 border-t border-white/5 pt-8 tracking-widest text-left">Support</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="relative z-10">
+        
+        <!-- Hero Section -->
+        <header id="home" class="min-h-screen flex flex-col items-center justify-center pt-24 px-6 text-center">
+            <div class="max-w-7xl relative">
+                <div class="relative inline-flex items-center justify-center mb-12">
+                    <div class="absolute inset-0 bg-gradient-to-r from-cyan-500 via-purple-500 to-yellow-500 blur-xl rounded-full hero-badge-pulse scale-110"></div>
+                    <div class="relative px-8 py-3 rounded-full border border-cyan-400/30 bg-black/60 backdrop-blur-md flex items-center space-x-3">
+                        <span class="relative flex h-3 w-3 shrink-0">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400"></span>
+                            <span class="relative inline-flex rounded-full h-3 w-3 bg-cyan-500"></span>
+                        </span>
+                        <span class="text-[11px] font-black uppercase tracking-[0.3em] text-prize-gradient text-nowrap">The 24-Hour HACKATHON</span>
+                    </div>
+                </div>
+                <h2 class="text-lg md:text-3xl font-bold opacity-60 mb-2 uppercase mono glow-cyan text-center">ERODE SENGUNTHAR ENGINEERING COLLEGE</h2>
+                
+                <!-- DEPARTMENT NAME - UPDATED TO BE BOLDER -->
+                <h3 class="text-sm md:text-lg font-black text-cyan-400 mb-6 tracking-[0.25em] uppercase opacity-100 text-center glow-cyan">
+                    Department Of ARTIFICIAL INTELLIGENCE & MACHINE LEARNING AND CYBER SECURITY
+                </h3>
+                
+                <h1 class="text-4xl md:text-8xl lg:text-9xl font-black mb-8 italic uppercase leading-tight text-center">
+                    <span class="cyberpunk-title">NEURONEXUS & DEFENSTRA</span>
+                </h1>
+                
+                <p class="text-xl md:text-2xl text-slate-400 mb-12 max-w-3xl mx-auto font-medium tracking-widest italic glow-cyan uppercase text-center">“Think like a hacker, build like an innovator, secure like a guardian.”</p>
+                
+                <div class="flex flex-wrap gap-4 justify-center" id="countdown">
+                    <div class="bg-black/60 border border-cyan-500/20 p-4 rounded-xl min-w-[100px] shadow-xl text-center">
+                        <div class="text-4xl md:text-6xl font-black text-white glow-cyan text-center" id="days">00</div>
+                        <div class="text-[10px] uppercase text-cyan-400 font-bold text-center">Days</div>
+                    </div>
+                    <div class="bg-black/60 border border-cyan-500/20 p-4 rounded-xl min-w-[100px] shadow-xl text-center">
+                        <div class="text-4xl md:text-6xl font-black text-white glow-cyan text-center" id="hours">00</div>
+                        <div class="text-[10px] uppercase text-cyan-400 font-bold text-center">Hours</div>
+                    </div>
+                    <div class="bg-black/60 border border-cyan-500/20 p-4 rounded-xl min-w-[100px] shadow-xl text-center">
+                        <div class="text-4xl md:text-6xl font-black text-white glow-cyan text-center" id="minutes">00</div>
+                        <div class="text-[10px] uppercase text-cyan-400 font-bold text-center">Min</div>
+                    </div>
+                    <div class="bg-black/60 border border-cyan-500/20 p-4 rounded-xl min-w-[100px] shadow-xl text-center">
+                        <div class="text-4xl md:text-6xl font-black text-white glow-cyan text-center" id="seconds">00</div>
+                        <div class="text-[10px] uppercase text-cyan-400 font-bold text-center">Sec</div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--THEME SECTION-->
+         <section id="themes" class="py-32 px-6 relative z-10 text-left">
+    <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+            <div class="text-left">
+                <h2 class="text-4xl md:text-6xl font-black uppercase italic tracking-tighter glow-cyan">
+                    Mission <span class="text-cyan-400">Tracks</span>
+                </h2>
+                <p class="text-slate-500 font-black text-[10px] tracking-[0.5em] uppercase mt-4">Select your domain // Initialize innovation</p>
+            </div>
+            <div class="h-[2px] flex-grow mx-8 mb-4 bg-gradient-to-r from-cyan-500/50 to-transparent hidden md:block"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="glass-card p-8 rounded-3xl border-white/5 group hover:border-cyan-500/50 transition-all">
+                <div class="w-14 h-14 bg-cyan-500/10 rounded-2xl flex items-center justify-center text-cyan-400 mb-8 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-industry text-2xl"></i>
+                </div>
+                <h4 class="text-white font-black mb-4 text-xl uppercase italic">Industry 4.0 & 5.0</h4>
+                <p class="text-slate-400 text-xs font-bold leading-relaxed uppercase tracking-wider">
+                    Bridging the gap between automated efficiency and human-centric cognitive manufacturing.
+                </p>
+            </div>
+
+            <div class="glass-card p-8 rounded-3xl border-white/5 group hover:border-purple-500/50 transition-all">
+                <div class="w-14 h-14 bg-purple-500/10 rounded-2xl flex items-center justify-center text-purple-400 mb-8 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-rocket text-2xl"></i>
+                </div>
+                <h4 class="text-white font-black mb-4 text-xl uppercase italic">Think Smart & Build Fast</h4>
+                <p class="text-slate-400 text-xs font-bold leading-relaxed uppercase tracking-wider">
+                    Rapid App Development: Transforming complex logic into high-performance digital solutions at speed.
+                </p>
+            </div>
+
+            <div class="glass-card p-8 rounded-3xl border-white/5 group hover:border-yellow-500/50 transition-all">
+                <div class="w-14 h-14 bg-yellow-500/10 rounded-2xl flex items-center justify-center text-yellow-400 mb-8 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-shield-halved text-2xl"></i>
+                </div>
+                <h4 class="text-white font-black mb-4 text-xl uppercase italic">Blockchain & Cyber Security</h4>
+                <p class="text-slate-400 text-xs font-bold leading-relaxed uppercase tracking-wider">
+                    Decentralized ledgers and iron-clad defense protocols for the next generation of web security.
+                </p>
+            </div>
+
+            <div class="glass-card p-8 rounded-3xl border-white/5 group hover:border-orange-500/50 transition-all">
+                <div class="w-14 h-14 bg-orange-500/10 rounded-2xl flex items-center justify-center text-orange-400 mb-8 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-cubes text-2xl"></i>
+                </div>
+                <h4 class="text-white font-black mb-4 text-xl uppercase italic">Digital Product Relevance</h4>
+                <p class="text-slate-400 text-xs font-bold leading-relaxed uppercase tracking-wider">
+                    Engineering products that solve real-world pain points with market-ready scalability.
+                </p>
+            </div>
+
+            <div class="glass-card p-8 rounded-3xl border-white/5 group hover:border-cyan-400 transition-all lg:col-span-2">
+                <div class="flex flex-col md:flex-row gap-8 items-start md:items-center">
+                    <div class="w-14 h-14 shrink-0 bg-cyan-400/10 rounded-2xl flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-network-wired text-2xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-black mb-2 text-xl uppercase italic">AI in Networking & Cyber Security</h4>
+                        <p class="text-slate-400 text-xs font-bold leading-relaxed uppercase tracking-wider">
+                            Implementing neural networks for predictive threat detection and autonomous network optimization.
+                        </p>
+                    </div>
+                    <div class="ml-auto">
+                        <span class="px-4 py-1 rounded-full border border-cyan-400/30 text-cyan-400 text-[9px] font-black uppercase tracking-widest">Featured Track</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+        <!-- Agenda Section -->
+        <section id="agenda" class="py-32 px-6 relative text-center">
+            <div class="max-w-4xl mx-auto text-center mb-24">
+                <h2 class="text-5xl md:text-7xl font-bold italic uppercase tracking-tighter text-center">Event <span class="text-orange-500">Agenda</span></h2>
+                <div class="h-1 w-24 bg-orange-500 mx-auto mt-6 rounded-full shadow-[0_0_15px_#f97316]"></div>
+            </div>
+
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+                <div class="relative z-10 flex justify-center mb-16"><span class="bg-orange-600 text-black px-8 py-2 rounded-lg font-black uppercase text-sm">Day 01</span></div>
+                <div class="timeline-item left-item"><div class="glass-card p-6 rounded-2xl"><span class="text-orange-500 font-bold text-xs block mb-1">10:00 AM</span><h4 class="text-white font-bold uppercase"><i class="fa-solid fa-flag-checkered mr-2 opacity-50"></i>Inauguration Ceremony</h4></div></div>
+                <div class="timeline-item right-item"><div class="glass-card p-6 rounded-2xl"><span class="text-orange-500 font-bold text-xs block mb-1">TBA</span><h4 class="text-white font-bold uppercase"><i class="fa-solid fa-coffee mr-2 opacity-50"></i>First Refreshment</h4></div></div>
+                <div class="timeline-item left-item"><div class="glass-card p-6 rounded-2xl border-orange-500/40"><span class="text-orange-500 font-bold text-xs block mb-1">11:00 AM</span><h4 class="text-white font-bold uppercase"><i class="fa-solid fa-bolt mr-2 text-orange-500"></i>Hackathon Begins!</h4><p class="text-orange-400 text-[10px] font-black uppercase">Problem statement Reveal</p></div></div>
+                <div class="timeline-item right-item"><div class="glass-card p-6 rounded-2xl"><span class="text-orange-500 font-bold text-xs block mb-1">12:00 PM - 01:00 PM</span><h4 class="text-white font-bold uppercase"><i class="fa-solid fa-code mr-2 opacity-50"></i>First Inspection</h4><p class="text-slate-400 text-[10px] uppercase">Coding Phase & Idea And Setup</p></div></div>
+                <div class="timeline-item left-item"><div class="glass-card p-6 rounded-2xl"><span class="text-orange-500 font-bold text-xs block mb-1">02:00 PM</span><h4 class="text-white font-bold uppercase"><i class="fa-solid fa-utensils mr-2 opacity-50"></i>Lunch Break</h4></div></div>
+                <div class="timeline-item right-item"><div class="glass-card p-6 rounded-2xl"><span class="text-orange-500 font-bold text-xs block mb-1">04:00 PM</span><h4 class="text-white font-bold uppercase"><i class="fa-solid fa-microchip mr-2 opacity-50"></i>Second Inspection</h4><p class="text-slate-400 text-[10px] uppercase">Core Development</p></div></div>
+                <div class="timeline-item left-item"><div class="glass-card p-6 rounded-2xl"><span class="text-orange-500 font-bold text-xs block mb-1">05:00 PM</span><h4 class="text-white font-bold uppercase"><i class="fa-solid fa-mug-hot mr-2 opacity-50"></i>Evening Refreshment</h4></div></div>
+                <div class="timeline-item right-item"><div class="glass-card p-6 rounded-2xl"><span class="text-orange-500 font-bold text-xs block mb-1">06:30 PM</span><h4 class="text-white font-bold uppercase"><i class="fa-solid fa-user-tie mr-2 opacity-50"></i>Third Inspection</h4><p class="text-slate-400 text-[10px] uppercase text-left">Mentoring Round</p></div></div>
+                <div class="timeline-item left-item"><div class="glass-card p-6 rounded-2xl"><span class="text-orange-500 font-bold text-xs block mb-1 uppercase">09:00 PM</span><h4 class="text-white font-bold uppercase"><i class="fa-solid fa-bowl-food mr-2 opacity-50"></i>Dinner Break</h4></div></div>
+                <div class="timeline-item right-item"><div class="glass-card p-8 rounded-2xl border-orange-500 shadow-[0_0_20px_rgba(249,115,22,0.3)]"><span class="text-orange-500 font-black text-sm block mb-1 uppercase">10:00 PM</span><h4 class="text-xl font-black text-white uppercase"><i class="fa-solid fa-moon mr-2 text-orange-500 animate-pulse"></i>THE OVER NIGHT SPRINT BEGINS!</h4></div></div>
+                <div class="timeline-item left-item"><div class="glass-card p-6 rounded-2xl"><span class="text-orange-500 font-bold text-xs block mb-1 uppercase text-right text-right text-right text-right text-right text-right text-right">12:00 AM - 04:00 AM</span><h4 class="text-white font-bold uppercase"><i class="fa-solid fa-battery-half mr-2 opacity-50"></i>Mid Night Refresh</h4></div></div>
+
+                <div class="relative z-10 flex justify-center my-16"><span class="bg-orange-600 text-black px-8 py-2 rounded-lg font-black uppercase text-sm">Day 02</span></div>
+                <div class="timeline-item right-item"><div class="glass-card p-6 rounded-2xl"><span class="text-orange-500 font-bold text-xs block mb-1 uppercase">07:00 AM - 08:00 AM</span><h4 class="text-white font-bold uppercase"><i class="fa-solid fa-sun mr-2 opacity-50"></i>Morning Breakfast</h4></div></div>
+                <div class="timeline-item left-item"><div class="glass-card p-6 rounded-2xl border-red-500/50"><span class="text-red-500 font-black text-xs block mb-1 uppercase">11:00 AM</span><h4 class="text-white font-bold uppercase text-right"><i class="fa-solid fa-power-off mr-2 text-red-500"></i>Hackathon Ends!</h4></div></div>
+                <div class="timeline-item right-item"><div class="glass-card p-6 rounded-2xl"><span class="text-orange-500 font-bold text-xs block mb-1 uppercase">12:00 PM</span><h4 class="text-white font-bold uppercase text-left"><i class="fa-solid fa-utensils mr-2 opacity-50"></i>Lunch Break</h4></div></div>
+                <div class="timeline-item left-item"><div class="glass-card p-6 rounded-2xl border-yellow-500/40"><span class="text-yellow-500 font-bold text-xs block mb-1 uppercase">01:00 PM - 02:00 PM</span><h4 class="text-white font-bold uppercase"><i class="fa-solid fa-trophy mr-2 text-yellow-500"></i>Valedictory Ceremony</h4><p class="text-yellow-400 text-[10px] font-black uppercase">Prize Honor</p></div></div>
+                <div class="timeline-item right-item"><div class="glass-card p-6 rounded-2xl"><span class="text-orange-500 font-bold text-xs block mb-1 uppercase">03:00 PM</span><h4 class="text-white font-bold uppercase text-left text-left text-left"><i class="fa-solid fa-door-open mr-2 opacity-50"></i>Closing And Departure</h4></div></div>
+            </div>
+        </section>
+
+        <!-- Grand Prizes Section -->
+        <section id="prizes" class="py-32 px-6 relative z-10 text-center">
+            <h2 class="text-3xl sm:text-5xl md:text-6xl font-black mb-24 uppercase italic tracking-tighter text-center">
+                <span class="text-prize-gradient px-4 uppercase text-center">GRAND PRIZES</span> 
+                <span class="uppercase text-center">FOR Sinthan'AI 2K26</span>
+            </h2>
+            <div class="grid md:grid-cols-3 gap-10 max-w-7xl mx-auto items-end text-center">
+                <div class="glass-card p-10 rounded-[2.5rem] border-purple-500/30 flex flex-col items-center">
+                    <div class="text-6xl mb-6 grayscale hover:grayscale-0 transition-all text-center">🥈</div>
+                    <div class="text-4xl font-black mb-2 glow-purple text-white text-center">₹7,000</div>
+                    <p class="text-[10px] uppercase text-purple-400 font-bold tracking-widest text-center uppercase">Runner-Up // Silver</p>
+                </div>
+                <!-- Champion Aligned Center -->
+                <div class="glass-card p-14 rounded-[3rem] border-2 border-yellow-500/50 transform md:scale-110 relative flex flex-col items-center justify-center">
+                    <div class="absolute inset-0 bg-[#fef08a]/5 animate-pulse rounded-[3rem]"></div>
+                    <div class="text-8xl mb-8 transition-transform hover:scale-110 text-center">🏆</div>
+                    <div class="text-sm font-black text-[#fef08a] uppercase tracking-[0.4em] mb-4 text-center">Champion // Alpha</div>
+                    <div class="w-full flex items-center justify-center text-center">
+                        <div class="text-5xl md:text-7xl font-black text-white glow-yellow mb-6 tracking-tighter text-center text-nowrap">₹10,000</div>
+                    </div>
+                    <div class="bg-[#fef08a]/20 text-[#fef08a] inline-block px-8 py-2 rounded-full font-black text-[10px] tracking-widest border border-[#fef08a]/30 uppercase text-center">Neural Supremacy</div>
+                </div>
+                <div class="glass-card p-10 rounded-[2.5rem] border-cyan-500/30 flex flex-col items-center justify-center">
+                    <div class="text-6xl mb-6 grayscale hover:grayscale-0 transition-all text-center">🥉</div>
+                    <div class="text-4xl font-black mb-2 glow-cyan text-white text-center">₹5,000</div>
+                    <p class="text-[10px] uppercase text-cyan-400 font-bold tracking-widest text-center uppercase">Solver // Bronze</p>
+                </div>
+                <div style="display: flex; justify-content: center; align-items: center; gap: 40px;">
+</div>
+
+
+
+            </div>
+            <div class="mt-20 max-w-4xl mx-auto p-10 bg-purple-900/20 rounded-[2rem] border border-cyan-400/20 text-center">
+                <p class="text-lg sm:text-xl md:text-2xl font-black uppercase italic tracking-widest text-white leading-relaxed text-center uppercase">
+                    For Best Performing Team <span class="text-cyan-400 uppercase text-center">Win ₹25,000</span> worth <br class="hidden md:block" />
+                    <span class="text-prize-gradient uppercase text-center">Internships</span> at Leading Startup Companies
+                </p>
+            </div>
+             <div class="w-full flex flex-row justify-center items-center gap-8 md:gap-16 mt-20 px-4">
+    <img src="images/stamin.jpeg" alt="Stamin" class="h-[60px] md:h-[80px] w-auto object-contain">
+    <img src="images/cloudzoo.jpeg" alt="CloudZoo" class="h-[80px] md:h-[100px] w-auto object-contain">
+    <img src="images/nutz.jpeg" alt="Nutz" class="h-[60px] md:h-[80px] w-auto object-contain">
+</div>
+        </section>
+
+        <!-- Protocols Section -->
+        <section id="notes" class="py-32 px-6 relative z-10 text-left">
+            <div class="max-w-7xl mx-auto text-left">
+                <h2 class="text-4xl md:text-6xl font-black mb-16 uppercase italic glow-cyan">Rules & <span class="text-cyan-400 text-yellow-400">Protocols</span></h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 uppercase text-left">
+                    <div class="glass-card p-8 rounded-2xl border-white/10 text-left hover:border-cyan-400 transition-all"><div class="w-10 h-10 bg-cyan-500/10 rounded-lg flex items-center justify-center text-cyan-400 mb-6 text-left"><i class="fa-solid fa-user-slash"></i></div><h4 class="text-white font-black mb-2 text-sm uppercase text-left">01 // No Spot Entry</h4><p class="text-slate-400 text-xs font-bold leading-relaxed text-left text-left">No Spot Registration. All participants must be pre-validated via the portal launch.</p></div>
+                    <div class="glass-card p-8 rounded-2xl border-white/10 text-left hover:border-cyan-400 transition-all text-left text-left"><div class="w-10 h-10 bg-cyan-500/10 rounded-lg flex items-center justify-center text-cyan-400 mb-6 text-left text-left"><i class="fa-solid fa-credit-card"></i></div><h4 class="text-white font-black mb-2 text-sm uppercase text-left text-left">02 // Unified Payment</h4><p class="text-slate-400 text-xs font-bold leading-relaxed text-left text-left text-left">Team Leader only to execute the full payment in a singular transaction.</p></div>
+                    <div class="glass-card p-8 rounded-2xl border-white/10 text-left hover:border-cyan-400 transition-all text-left text-left text-left"><div class="w-10 h-10 bg-cyan-500/10 rounded-lg flex items-center justify-center text-cyan-400 mb-6 text-left text-left text-left"><i class="fa-solid fa-image text-left"></i></div><h4 class="text-white font-black mb-2 text-sm uppercase text-left text-left text-left">03 // Payment Proof</h4><p class="text-slate-400 text-xs font-bold leading-relaxed text-left text-left text-left">Must submit the screen shot proof for the payment synchronization.</p></div>
+                    <div class="glass-card p-8 rounded-2xl border-white/10 text-left hover:border-cyan-400 transition-all text-left text-left text-left text-left"><div class="w-10 h-10 bg-cyan-500/10 rounded-lg flex items-center justify-center text-cyan-400 mb-6 text-left text-left text-left text-left"><i class="fa-solid fa-gavel"></i></div><h4 class="text-white font-black mb-2 text-sm uppercase text-left text-left text-left text-left">04 // Final Decision</h4><p class="text-slate-400 text-xs font-bold leading-relaxed text-left text-left text-left text-left">Jury's decision is the final decision. No procedural appeals accepted.</p></div>
+                    <div class="glass-card p-8 rounded-2xl border-white/10 text-left hover:border-cyan-400 transition-all text-left text-left text-left text-left text-left"><div class="w-10 h-10 bg-cyan-500/10 rounded-lg flex items-center justify-center text-cyan-400 mb-6 text-left text-left text-left text-left text-left"><i class="fa-solid fa-laptop text-left text-left"></i></div><h4 class="text-white font-black mb-2 text-sm uppercase text-left text-left text-left text-left text-left">05 // Gear Readiness</h4><p class="text-slate-400 text-xs font-bold leading-relaxed text-left text-left text-left text-left text-left">Participants bring your own laptops, cables, and required technical gear.</p></div>
+                    <div class="glass-card p-8 rounded-2xl border-white/10 text-left hover:border-cyan-400 transition-all text-left text-left text-left text-left text-left text-left text-left"><div class="w-10 h-10 bg-cyan-500/10 rounded-lg flex items-center justify-center text-cyan-400 mb-6 text-left text-left text-left text-left text-left text-left text-left"><i class="fa-solid fa-shield-halved text-left text-left text-left text-left text-left"></i></div><h4 class="text-white font-black mb-2 text-sm uppercase text-left text-left text-left text-left text-left text-left">06 // Asset Security</h4><p class="text-slate-400 text-xs font-bold leading-relaxed text-left text-left text-left text-left text-left text-left text-left text-left">You only responsible for your belongings. Secure your grid node.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Accommodation Section -->
+        <section id="accommodation" class="py-32 px-6 bg-black/40 relative z-10 text-left text-left">
+            <div class="max-w-7xl mx-auto text-left text-left">
+                <h2 class="text-4xl font-black mb-16 uppercase italic text-left">Accommodation <span class="text-purple-500 uppercase text-left text-left">& Logistics</span></h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-left uppercase text-xs text-left">
+                    <div class="glass-card p-10 rounded-3xl border-cyan-500/20 text-left text-left">
+                        <i class="fa-solid fa-bus text-cyan-400 text-4xl mb-6 text-left text-left text-left"></i>
+                        <h4 class="text-xl font-black uppercase mb-4 text-left text-left text-left text-left">Transport Grid</h4>
+                        <p class="text-slate-400 font-bold mb-6 text-left uppercase text-left text-left text-left">Transport is available Pick And Drop At Perundhurai Bus Stand.</p>
+                        <div class="bg-cyan-500/10 p-4 rounded-xl border border-cyan-500/20 text-left text-left text-left">
+                            <span class="text-cyan-400 font-black text-[10px] tracking-widest uppercase text-center text-left text-left text-left text-left">Timing: 09:00 AM & 09:30 AM</span>
+                        </div>
+                    </div>
+                    <div class="glass-card p-10 rounded-3xl border-purple-500/30 text-left text-left text-left text-left text-left">
+                        <i class="fa-solid fa-utensils text-purple-400 text-4xl mb-6 text-left text-left text-left text-left text-left text-left text-left"></i>
+                        <h4 class="text-xl font-black uppercase mb-4 text-left text-left text-left text-left text-nowrap text-left text-left">Sustenance</h4>
+                        <p class="text-slate-400 font-bold text-left leading-relaxed text-left uppercase text-left text-left text-left text-left">Food & Refreshments Will Be Provided For All Registered Participants.</p>
+                    </div>
+                    <div class="glass-card p-10 rounded-3xl border-yellow-500/30 text-left text-left text-left text-left text-left text-left">
+                        <i class="fa-solid fa-circle-info text-yellow-400 text-4xl mb-6 text-left text-left text-left text-left text-left text-left"></i>
+                        <h4 class="text-xl font-black uppercase mb-4 text-left text-left text-left text-left text-nowrap text-left text-left text-left text-left">Facility</h4>
+                        <p class="text-slate-400 font-bold mb-4 uppercase text-left leading-relaxed text-left text-left text-left text-left">Provided for refreshment purpose only. Own belongings responsibility.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Registration Section -->
+        <section id="register" class="py-32 px-6 relative z-10 text-left">
+            <div class="flex flex-col items-center justify-center mb-8">
+        <p class="text-slate-400 font-black uppercase tracking-[0.3em] text-[10px] mb-4">Scan to Pay // UPI Gateway</p>
+        <div class="p-4 bg-white rounded-2xl shadow-[0_0_20px_rgba(255,255,255,0.1)]">
+            <img src="images/www.jpeg" 
+                 alt="Payment QR Code" 
+                 class="w-48 h-48 md:w-64 md:h-64 object-contain">
+        </div>
+    </div>
+            <div class="max-w-7xl mx-auto glass-card p-10 md:p-16 rounded-[3rem] border-cyan-400/20 shadow-2xl text-left text-left">
+                <h2 class="text-4xl font-black text-center mb-16 uppercase italic tracking-tighter text-center text-left text-left">Squad <span class="text-cyan-400 text-center uppercase text-center text-left text-left">Onboarding</span></h2>
+                <form id="registration-form" class="space-y-12 text-left uppercase text-[10px] text-left text-left" onsubmit="handleRegistration(event)">
+                    <div class="grid md:grid-cols-2 gap-8 text-left text-left text-left text-left">
+                        <input id="college" type="text" placeholder="Enter College Name" required class="w-full bg-black border border-white/10 p-6 rounded-xl focus:border-cyan-400 outline-none text-white uppercase text-left text-left" />
+                        <input id="team" type="text" placeholder="Enter Team Name" required class="w-full bg-black border border-white/10 p-6 rounded-xl focus:border-cyan-400 outline-none text-white uppercase text-left text-left" />
+                    </div>
+                    <div class="bg-white/5 p-10 rounded-2xl border border-white/10 text-left text-left text-left text-left">
+                        <h4 class="text-purple-400 font-black mb-8 tracking-widest text-sm uppercase text-left text-left text-left text-left">Identity: Team Leader</h4>
+                        <div class="grid md:grid-cols-3 gap-6 text-left text-left text-left text-left">
+                            <input id="leaderName" type="text" placeholder="Name" required class="bg-black border border-white/10 p-4 rounded-xl outline-none focus:border-cyan-400 text-white text-left text-left text-left" />
+                            <input id="leaderPhone" type="tel" placeholder="Mobile" required class="bg-black border border-white/10 p-4 rounded-xl outline-none focus:border-cyan-400 text-white text-left text-left text-left" />
+                            <input id="leaderEmail" type="email" placeholder="Mail" required class="bg-black border border-white/10 p-4 rounded-xl outline-none focus:border-cyan-400 text-white text-left text-left text-left" />
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-3 gap-8 text-left text-left text-left text-left">
+                        <div class="glass-card p-8 rounded-2xl border-white/5 text-left text-left text-left text-left text-left text-left"><h4 class="text-cyan-500 font-black mb-6 tracking-widest text-xs uppercase italic text-left text-left text-left text-left text-left text-left">Node 01 (Member)</h4><div class="space-y-4 text-left text-left text-left text-left"><input id="m1Name" type="text" placeholder="Name" required class="w-full bg-black border border-white/10 p-4 rounded-xl outline-none text-white text-left text-left text-left" /><input id="m1Phone" type="tel" placeholder="Mobile" required class="w-full bg-black border border-white/10 p-4 rounded-xl outline-none text-white text-left text-left text-left" /><input id="m1Email" type="email" placeholder="Mail" required class="w-full bg-black border border-white/10 p-4 rounded-xl outline-none text-white text-left text-left text-left text-left" /></div></div>
+                        <div class="glass-card p-8 rounded-2xl border-white/5 text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left"><h4 class="text-cyan-500 font-black mb-6 tracking-widest text-xs uppercase italic text-left text-left text-left text-left text-left text-left text-left text-left">Node 02 (Member)</h4><div class="space-y-4 text-left text-left text-left text-left text-left text-left"><input id="m2Name" type="text" placeholder="Name" required class="w-full bg-black border border-white/10 p-4 rounded-xl outline-none text-white text-left text-left text-left text-left" /><input id="m2Phone" type="tel" placeholder="Mobile" required class="w-full bg-black border border-white/10 p-4 rounded-xl outline-none text-white text-left text-left text-left text-left" /><input id="m2Email" type="email" placeholder="Mail" required class="w-full bg-black border border-white/10 p-4 rounded-xl outline-none text-white text-left text-left text-left text-left text-left" /></div></div>
+                        <div class="glass-card p-8 rounded-2xl border-white/5 text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left"><h4 class="text-cyan-500 font-black mb-6 tracking-widest text-xs uppercase italic text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left">Node 03 (Member)</h4><div class="space-y-4 text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left"><input id="m3Name" type="text" placeholder="Name" required class="w-full bg-black border border-white/10 p-4 rounded-xl outline-none text-white text-left text-left text-left text-left text-left" /><input id="m3Phone" type="tel" placeholder="Mobile" required class="w-full bg-black border border-white/10 p-4 rounded-xl outline-none text-white text-left text-left text-left text-left text-left" /><input id="m3Email" type="email" placeholder="Mail" required class="w-full bg-black border border-white/10 p-4 rounded-xl outline-none text-white text-left text-left text-left text-left text-left text-left" /></div></div>
+                    </div>
+
+                    <div class="glass-card p-10 rounded-2xl border-cyan-500/30 text-center text-center text-center text-center">
+                        <h4 class="text-xl font-black uppercase italic mb-4 text-center text-center text-center text-center">Payment Sync</h4>
+                        <label class="block w-full bg-black border-2 border-dashed border-white/10 p-12 text-center rounded-xl cursor-pointer hover:border-cyan-400 text-center text-center text-center text-center">
+                            <span class="text-slate-500 font-black uppercase tracking-widest text-xs text-center text-center text-center text-center text-center" id="file-label">Upload The Transaction Screenshot Here</span>
+                            <input type="file" required accept="image/*" class="hidden" onchange="document.getElementById('file-label').innerText = this.files[0].name; document.getElementById('file-label').classList.add('text-cyan-400');">
+                        </label>
+                    </div>
+
+                    <div class="flex items-center justify-center space-x-3 text-center text-center text-center text-center">
+                        <input type="checkbox" id="terms-acceptance" required class="w-6 h-6 rounded bg-black border-cyan-500 text-cyan-400" />
+                        <label for="terms-acceptance" class="text-[10px] text-slate-500 font-black uppercase tracking-widest cursor-pointer leading-relaxed text-center uppercase text-center text-center text-center">Accept protocols & charters for 𝐒𝐢𝐧𝐭𝐡𝐚𝐧'𝐀𝐈</label>
+                    </div>
+
+                    <button type="submit" id="submit-btn" class="w-full py-6 bg-cyan-500 text-black font-black text-xl rounded-xl shadow-[0_0_20px_rgba(0,242,255,0.2)] hover:bg-cyan-400 transition-all uppercase text-center text-center">Finalize Uplink</button>
+                    <div id="form-success" class="hidden p-4 bg-cyan-500/10 border border-cyan-500 text-cyan-400 text-center font-bold rounded-xl animate-pulse uppercase text-xs text-center text-center">✓ UPLINK SUCCESSFUL. DATA SECURED.</div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Support Section -->
+        <section id="contact" class="py-32 px-6 bg-[#08080a] relative z-10 text-left uppercase text-left text-left text-left text-left text-left text-left text-left">
+            <div class="max-w-7xl mx-auto text-left text-left text-left">
+                <h2 class="text-4xl md:text-6xl font-black mb-16 uppercase italic glow-cyan tracking-tight text-left text-left text-left text-left text-left text-left text-left text-left text-left">Support <span class="text-cyan-400 uppercase text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left">& Inquiries</span></h2>
+                <div class="grid lg:grid-cols-3 gap-10 text-left text-left text-left text-left text-left text-left">
+                    <div class="glass-card p-10 rounded-3xl border-cyan-500/20 text-left text-left text-left text-left text-left"><i data-lucide="mail" class="w-10 h-10 text-cyan-400 mb-8 text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left"></i><div class="space-y-4 text-[10px] font-bold uppercase tracking-widest lowercase text-left text-left text-left text-left text-left text-left"><p class="hover:text-cyan-400 cursor-pointer text-left text-left text-left text-left text-left text-left">mlhub@esec.ac.in</p><p class="hover:text-cyan-400 cursor-pointer text-left text-left text-left text-left text-left text-left text-left">cyberdefender@esec.ac.in</p></div></div>
+                    <div class="glass-card p-10 rounded-3xl border-purple-500/20 text-left text-left text-nowrap text-left text-left text-left text-left text-left text-left text-left text-left text-left"><i data-lucide="user-check" class="w-10 h-10 text-purple-400 mb-8 text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left"></i><h4 class="font-black mb-6 uppercase text-purple-400 italic text-sm text-left text-left text-nowrap text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left">Coordinators</h4><div class="space-y-4 text-xs font-bold uppercase text-left text-left text-left text-nowrap text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-nowrap text-left text-left text-left"><div class="text-left text-left text-nowrap text-left text-left text-left text-left text-left text-left text-left text-left text-left text-nowrap text-left text-left text-left text-left text-left text-left text-left text-left text-nowrap"><p class="text-white text-left text-left text-nowrap text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-nowrap">Ms. N. Krishnaveni</p><p class="text-slate-400 mt-1 text-left text-left text-nowrap text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-nowrap text-left text-left text-left text-left">9597035763</p></div><div class="pt-4 border-t border-white/5 text-left text-left text-nowrap text-left text-left text-left text-left text-left text-left text-left text-left text-left text-nowrap text-left text-left text-nowrap text-left text-left text-left text-left text-left text-nowrap text-left text-left text-left text-left"><p class="text-white text-left text-left text-nowrap text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-nowrap text-left text-left text-left text-left text-left text-nowrap text-left text-left text-left text-left">Dr. S. Parvathi</p><p class="text-slate-400 mt-1 text-left text-left text-nowrap text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-nowrap text-left text-left text-left text-left text-left text-nowrap text-left text-left text-left text-left text-left text-left">9994269586</p></div><div class="text-left text-left text-nowrap text-left text-left text-left text-left text-left text-left text-left text-left text-left text-nowrap text-left text-left text-nowrap text-left text-left text-nowrap text-left text-left text-left text-left text-left text-nowrap text-left text-left text-left text-left text-left text-left text-left text-left"><p class="text-white text-left text-left text-nowrap text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-nowrap text-left text-left text-nowrap text-left text-left text-left text-left text-left text-nowrap text-left text-left text-left text-left text-left text-left text-left text-left">Ms. S. Revathi</p><p class="text-slate-400 mt-1 text-left text-left text-nowrap text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-nowrap text-left text-left text-nowrap text-left text-left text-nowrap text-left text-left text-left text-left text-left text-nowrap text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left">7010265747</p></div></div></div>
+                    <div class="glass-card p-10 rounded-3xl border-yellow-500/30 text-left text-left text-nowrap text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left"><i data-lucide="users" class="w-10 h-10 text-yellow-400 mb-8 text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left"></i><h4 class="font-black mb-6 uppercase text-yellow-400 italic text-sm text-left text-left text-nowrap text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left">Student Nodes</h4><div class="space-y-4 text-xs font-bold uppercase text-left text-left text-left text-nowrap text-left text-left text-nowrap text-left text-left text-left text-left text-left text-left text-nowrap text-left text-left text-nowrap text-left text-left text-nowrap text-left text-left text-nowrap text-left text-left text-nowrap text-left text-left text-left text-left text-left text-left text-left text-left text-left text-nowrap"><div class="text-left text-left text-nowrap text-left text-left text-nowrap text-left text-left text-left text-left text-left text-nowrap text-left text-left text-nowrap text-left text-left text-nowrap text-left text-left text-nowrap text-left text-left text-nowrap text-left text-left text-left text-left text-left text-left text-left text-left text-left text-nowrap"><p class="text-white text-left text-left text-nowrap text-left text-left text-nowrap text-left text-left text-left text-left text-left text-nowrap text-left text-left text-nowrap text-left text-left text-nowrap text-left text-left text-nowrap text-left text-left text-nowrap text-left text-left text-left text-left text-left text-left text-left text-left text-left text-nowrap text-left">R. Bharanitharan</p><p class="text-slate-400 mt-1 text-left text-left text-nowrap text-left text-left text-nowrap text-left text-left text-left text-left text-left text-nowrap text-left text-left text-nowrap text-left text-left text-nowrap text-left text-left text-nowrap text-left text-left text-nowrap text-left text-left text-left text-left text-left text-left text-left text-left text-left text-nowrap text-left">7604957634</p></div><div class="pt-4 border-t border-white/5 text-left text-left text-nowrap text-left text-left text-nowrap text-left text-left text-left text-left text-left text-nowrap text-left text-left text-nowrap text-left text-left text-nowrap text-left text-left text-nowrap text-left text-left text-nowrap text-left text-left text-nowrap text-left text-left text-nowrap text-left text-left text-nowrap text-left text-left text-nowrap text-left text-left text-nowrap text-left text-left text-nowrap text-left"><p class="text-white text-left text-left text-nowrap text-left text-left text-nowrap text-left text-left text-left text-left text-left text-nowrap text-left text-left text-nowrap text-left text-left text-nowrap text-left text-left text-nowrap text-left text-left text-nowrap text-left text-left text-nowrap text-left text-left text-nowrap text-left text-left text-nowrap text-left text-left text-nowrap text-left text-left text-nowrap text-left text-left text-nowrap text-left text-nowrap text-left text-left text-nowrap">S. Shayam</p><p class="text-slate-400 mt-1 text-left text-left text-nowrap text-left text-left text-nowrap text-left text-left text-left text-left text-left text-nowrap text-left text-left text-nowrap text-left text-left text-nowrap text-left text-left text-nowrap text-left text-left text-nowrap text-left text-left text-nowrap text-left text-left text-nowrap text-left text-left text-nowrap text-left text-left text-nowrap text-left text-left text-nowrap text-left text-left text-nowrap text-left text-nowrap text-left text-left text-nowrap text-left text-left text-nowrap text-left">8072760383</p></div></div></div>
+                </div>
+            </div>
+        </section>
+       <div class="w-full py-16 flex flex-col items-center justify-center relative z-10 px-6">
+    <h3 class="text-cyan-400 font-black text-[10px] tracking-[0.5em] uppercase mb-10 glow-cyan">
+        Media Sponsored By
+    </h3>
+    
+    <div class="max-w-7xl w-full flex flex-row flex-wrap justify-center items-center gap-8 md:gap-12">
+        <img src="images/dream wings logo.png" 
+             alt="Dream Wings Media Partner" 
+             class="h-20 md:h-28 w-auto object-contain hover:scale-105 transition-transform duration-300 filter brightness-110">
+        
+        <img src="images/LOGO.png" 
+             alt="Media Partner" 
+             class="h-20 md:h-28 w-auto object-contain hover:scale-105 transition-transform duration-300 filter brightness-110">
+    </div>
+</div>
+</div>
+
+<section id="contact" ...
+
+        <!-- Social Media Section -->
+        <section class="py-24 px-6 bg-black border-t border-white/5 text-center relative z-10 text-center text-center text-center text-center text-center">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-center items-center gap-12 text-center text-left text-left text-left text-left text-left text-left text-left text-left">
+                <a href="https://instagram.com/ml._.powerhouse._.24" target="_blank" class="flex items-center space-x-6 group text-center text-left text-left text-left text-left text-left text-left text-left text-left">
+                    <div class="p-4 rounded-2xl bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] shadow-[0_0_20px_rgba(220,39,67,0.3)] transition-transform group-hover:scale-110 text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left"><i class="fa-brands fa-instagram text-white text-3xl"></i></div>
+                    <span class="text-2xl font-mono font-black text-white hover:text-purple-400 transition-colors lowercase tracking-tighter text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left">ml._.powerhouse._.24</span>
+                </a>
+                <a href="https://instagram.com/esec_cyber_" target="_blank" class="flex items-center space-x-6 group text-center text-left text-left text-left text-left text-left text-left text-left text-left">
+                    <div class="p-4 rounded-2xl bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] shadow-[0_0_20px_rgba(220,39,67,0.3)] transition-transform group-hover:scale-110 text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left"><i class="fa-brands fa-instagram text-white text-3xl text-left text-left"></i></div>
+                    <span class="text-2xl font-mono font-black text-white hover:text-purple-400 transition-colors lowercase tracking-tighter text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left text-left">esec_cyber_</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="py-16 px-6 bg-black text-slate-600 text-center relative z-10 border-t border-white/5 text-center text-center text-center text-center text-center text-center text-center">
+            <div class="text-2xl font-black text-white uppercase glow-cyan mb-8 italic text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center">Sinthan'AI <span class="text-cyan-400 uppercase text-center text-center uppercase text-center text-center text-center text-center text-center text-center text-center text-center text-center">2K26⚡❗</span></div>
+            <div class="flex justify-center space-x-12 text-[15px] font-black uppercase tracking-[0.4em] text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center"><a href="#" class="text-cyan-400 transition-colors text-center text-center uppercase text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center">தமிழ் வாழ்க</a><a href="#" class="text-cyan-400 transition-colors text-nowrap text-center text-center uppercase text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center">தமிழ் வளர்க!!!</a></div>
+        </footer>
+    </div>
+
+    <script>
+        lucide.createIcons();
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+            menu.classList.toggle('active');
+            const isOpen = menu.classList.contains('active');
+            icon.setAttribute('data-lucide', isOpen ? 'x' : 'menu');
+            lucide.createIcons();
+        }
+        const targetDate = new Date();
+        targetDate.setDate(targetDate.getDate() + 30);
+        targetDate.setHours(targetDate.getHours() +9 );
+        targetDate.setMinutes(targetDate.getMinutes() +45);
+        function updateCountdown() {
+            const now = new Date();
+            const diff = targetDate - now;
+            if (diff <= 0) return;
+            document.getElementById('days').innerText = Math.floor(diff / (1000 * 60 * 60 * 24)).toString().padStart(2, '0');
+            document.getElementById('hours').innerText = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString().padStart(2, '0');
+            document.getElementById('minutes').innerText = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, '0');
+            document.getElementById('seconds').innerText = Math.floor((diff % (1000 * 60)) / 1000).toString().padStart(2, '0');
+        }
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+        async function handleRegistration(e) {
+            e.preventDefault();
+            const btn = document.getElementById('submit-btn');
+            const successMsg = document.getElementById('form-success');
+            const formData = {
+                collegeName: document.getElementById('college').value,
+                teamName: document.getElementById('team').value,
+                leaderName: document.getElementById('leaderName').value,
+                leaderMobile: document.getElementById('leaderPhone').value,
+                leaderEmail: document.getElementById('leaderEmail').value,
+                m1: document.getElementById('m1Name').value,
+                m2: document.getElementById('m2Name').value,
+                m3: document.getElementById('m3Name').value
+            };
+            btn.disabled = true;
+            btn.innerText = 'Processing Uplink...';
+            try {
+                await fetch("https://script.google.com/macros/s/AKfycbyxT5oV9FdO3vr5oYU8Xkh_iXz6NypO3tgigSMSEUNMB5NyQu97mTub2bDGVduefuSe/exec", {
+                    method: "POST",
+                    mode: 'no-cors',
+                    body: JSON.stringify(formData)
+                });
+                successMsg.classList.remove('hidden');
+                btn.innerText = 'Uplink Completed';
+            } catch (err) {
+                console.error(err);
+                btn.disabled = false;
+                btn.innerText = 'Finalize Uplink';
+            }
+        }
+    </script>
+</body>
+</html>
